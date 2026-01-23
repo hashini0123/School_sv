@@ -18,22 +18,25 @@ public class StudnetController {
 
     @PostMapping("/add")
     public void addStudent(@RequestBody StudentDTO studentDTO){
+
         service.addStudent(studentDTO);
     }
 
     @PutMapping("/update")
     public void updateStudent(@RequestBody StudentDTO studentDTO){
+
         service.updateStudent(studentDTO);
     }
 
     @DeleteMapping("/delete-by-id/{id}")
-    public void deleteById(Integer integer){
+    public void deleteById(Integer integer) {
         Integer id = 0;
         service.deleteStudent(id);
     }
 
     @GetMapping("/get-all")
-    public List<StudentDTO> getAll(){
+    public List<StudentDTO> getAll() {
+
         return service.getAll();
     }
 
